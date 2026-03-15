@@ -1,0 +1,9 @@
+GET http://localhost:8001/dsHello?msg=8fPESj1S
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.3.1.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2026-03-15T221829-1.200.txt
+
+###
+

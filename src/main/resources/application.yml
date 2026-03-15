@@ -1,0 +1,26 @@
+server:
+  port: 8001
+  application:
+    name: chatRAGDemo
+  servlet:
+    encoding:
+      charset: UTF-8
+      enabled: true
+      force: true
+  # 增加响应超时时间，避免流式响应被中断
+      force-response: true
+
+spring:
+  ai:
+    dashscope:
+      api-key: ${AI_DASHSCOPE_API_KEY}
+  webflux:
+    reactive:
+      streaming:
+        # 禁用响应聚合，确保流式输出
+        enable-aggregation: false
+  # 如果使用Tomcat容器，禁用输出缓冲
+  tomcat:
+    max-swallow-size: -1
+    async-timeout: 300000
+
