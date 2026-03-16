@@ -89,6 +89,19 @@
             <version>${milvus-sdk.version}</version>
         </dependency>
 
+        <!-- 文件读取工具 -->
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>2.15.1</version>
+        </dependency>
+<!--        &lt;!&ndash; JSON处理 &ndash;&gt;-->
+<!--        <dependency>-->
+<!--            <groupId>com.alibaba</groupId>-->
+<!--            <artifactId>fastjson2</artifactId>-->
+<!--            <version>2.0.48</version>-->
+<!--        </dependency>-->
+
         <!-- 7. Redis 缓存 + 连接池 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>

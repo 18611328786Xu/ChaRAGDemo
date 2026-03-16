@@ -14,6 +14,9 @@ spring:
   ai:
     dashscope:
       api-key: ${AI_DASHSCOPE_API_KEY}
+      embedding:
+        options:
+          model: text-embedding-v1 # 阿里云文本向量化模型
   webflux:
     reactive:
       streaming:
@@ -24,3 +27,11 @@ spring:
     max-swallow-size: -1
     async-timeout: 300000
 
+
+# Milvus配置
+milvus:
+  host: 127.0.0.1 # Milvus服务地址（单机版）
+  port: 19530      # Milvus默认端口
+  database: default
+  collection-name: file_embeddings # 向量集合名称
+  dimension: 1536 # 阿里云text-embedding-v1模型输出向量维度
