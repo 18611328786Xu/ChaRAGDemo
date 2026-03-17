@@ -23,7 +23,6 @@
 
         <!-- 改用全网可下载的版本 -->
         <spring-ai.version>1.0.0.RELEASE</spring-ai.version>
-        <milvus-sdk.version>2.3.5</milvus-sdk.version> <!-- 阿里云可下载的稳定版 -->
         <aliyun-sdk.version>2.2.0</aliyun-sdk.version>
         <okhttp.version>4.12.0</okhttp.version>
     </properties>
@@ -86,7 +85,7 @@
         <dependency>
             <groupId>io.milvus</groupId>
             <artifactId>milvus-sdk-java</artifactId>
-            <version>${milvus-sdk.version}</version>
+            <version>2.6.3</version>
         </dependency>
 
         <!-- 文件读取工具 -->
@@ -95,12 +94,25 @@
             <artifactId>commons-io</artifactId>
             <version>2.15.1</version>
         </dependency>
-<!--        &lt;!&ndash; JSON处理 &ndash;&gt;-->
-<!--        <dependency>-->
-<!--            <groupId>com.alibaba</groupId>-->
-<!--            <artifactId>fastjson2</artifactId>-->
-<!--            <version>2.0.48</version>-->
-<!--        </dependency>-->
+        <!-- JSON处理 -->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>2.0.32</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.pdfbox</groupId>
+            <artifactId>pdfbox</artifactId>
+            <version>2.0.32</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.42</version>
+<!--            <scope>provided</scope>-->
+        </dependency>
 
         <!-- 7. Redis 缓存 + 连接池 -->
         <dependency>
@@ -153,6 +165,14 @@
                     <compilerArgs>
                         <arg>--enable-preview</arg>
                     </compilerArgs>
+
+                    <annotationProcessorPaths>
+                        <path>
+                            <groupId>org.projectlombok</groupId>
+                            <artifactId>lombok</artifactId>
+                            <version>1.18.42</version>
+                        </path>
+                    </annotationProcessorPaths>
                 </configuration>
             </plugin>
         </plugins>
